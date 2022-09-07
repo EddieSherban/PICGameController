@@ -19,7 +19,7 @@ void initUART(){
     U1MODEbits.ABAUD= 1;
     U1MODEbits.STSEL=0;
     
-    U1BRG= 49; //set baud rate as 9600
+    U1BRG= 11; //set baud rate as 9600
     
     
     
@@ -38,7 +38,7 @@ void uartTXString(unsigned char *line){
     unsigned int i= 0;
     
     
-    while(*(line+i) != '\0'){
+    while((*(line+i) != '\0')){
     uartTXByte(*(line+i));
     i++;
     }
